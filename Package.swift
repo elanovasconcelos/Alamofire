@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.0
 // Package.swift
 //
 // Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
@@ -25,7 +25,7 @@ import PackageDescription
 
 let package = Package(
   name: "Alamofire",
-  platforms: [.iOS(.v9)],
+  platforms: [.iOS(.v8)],
   products: [.library(name: "Alamofire",
                                             targets: ["Alamofire"])],
   targets: [.target(name: "Alamofire",
