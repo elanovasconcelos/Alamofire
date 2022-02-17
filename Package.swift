@@ -1,3 +1,4 @@
+// swift-tools-version:5.5
 // Package.swift
 //
 // Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
@@ -23,5 +24,13 @@
 import PackageDescription
 
 let package = Package(
-  name: "Alamofire"
+  name: "Alamofire",
+  platforms: [.iOS(.v10)],
+  products: [.library(name: "Alamofire",
+                                            targets: ["Alamofire"])],
+  targets: [.target(name: "Alamofire",
+                                          path: "Source",
+                                          exclude: ["Info.plist"],
+                                          linkerSettings: [.linkedFramework("CFNetwork",
+                                                                            .when(platforms: [.iOS]))])]
 )
