@@ -25,7 +25,7 @@ import PackageDescription
 
 let package = Package(
   name: "Alamofire",
-  platforms: [.iOS(.v10)],
+  platforms: [.iOS(.v9)],
   products: [.library(name: "Alamofire",
                                             targets: ["Alamofire"])],
   targets: [.target(name: "Alamofire",
